@@ -38,14 +38,4 @@ public class PowerofTwo {
 
         return false;
     }
-
-    public static void main(String[] args) {
-        PowerofTwo powerofTwo = new PowerofTwo();
-        System.out.println(powerofTwo.isPowerOfTwo(-1));
-        System.out.println(powerofTwo.isPowerOfTwo(0));
-        System.out.println(powerofTwo.isPowerOfTwo(1));
-        System.out.println(powerofTwo.isPowerOfTwo(218));
-        System.out.println(powerofTwo.isPowerOfTwo(16));
-        System.out.println(powerofTwo.isPowerOfTwo(1073741825));
-    }
 }

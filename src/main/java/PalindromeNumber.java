@@ -21,6 +21,19 @@
  */
 public class PalindromeNumber {
 
+    public boolean isPalindrome(int x) {
+        if (x < 0) return false;
+
+        int origin = x;
+        int reverse = 0;
+        while (x != 0) {
+            reverse = reverse * 10 + x%10;
+            x /= 10;
+        }
+
+        return reverse == origin;
+    }
+
     public boolean isPalindrome_stringSolution(int x) {
         if (x < 0) return false;
         if (x < 10) return true;
@@ -38,7 +51,16 @@ public class PalindromeNumber {
 
     public static void main(String[] args) {
         PalindromeNumber p = new PalindromeNumber();
+        System.out.println(p.isPalindrome_stringSolution(-1));
         System.out.println(p.isPalindrome_stringSolution(10));
+        System.out.println(p.isPalindrome_stringSolution(120));
         System.out.println(p.isPalindrome_stringSolution(121));
+        System.out.println(p.isPalindrome_stringSolution(1231321));
+
+        System.out.println(p.isPalindrome(-1));
+        System.out.println(p.isPalindrome(10));
+        System.out.println(p.isPalindrome(120));
+        System.out.println(p.isPalindrome(121));
+        System.out.println(p.isPalindrome(1231321));
     }
 }
